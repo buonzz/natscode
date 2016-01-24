@@ -1,0 +1,11 @@
+{
+  "name": "natscode",
+  "version": "1.0.0",
+  "description": "Retrieve the natscode passed via QueryString or Cookie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Darwin Biler",
+  "license": "ISC"
+}
