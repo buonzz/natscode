@@ -2,7 +2,7 @@ var qsf = require('query-string');
 
 function natscode(options){
 
-	var raw_params = qsf.parse(location.search);
+	var raw_params = qsf.parse(window.location.search);
 	var output = {};
 	var params = {};
 
