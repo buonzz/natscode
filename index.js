@@ -15,7 +15,7 @@ function natscode(options){
 
 	var nats_cookie = getCookie('nats');
 
-	if(nats_cookie !== undefined)
+	if(nats_cookie != undefined)
 	{
 		var params_copy = params;
 		if(params_copy.nats !== undefined)
@@ -23,26 +23,16 @@ function natscode(options){
 			delete params_copy.nats;
 		}
 
-		var encoded_qsv = [];
-		for(k in params_copy){
-			encoded_qsv[encodeURIComponent(k)] = encodeURIComponent(params[k]);
-		}
-
-		var query1 = encoded_qsv.join("&");
+		var query1 = toQueryString(params);
 
 		output = "//" + options.linkdomain + "/signup/signup.php?nats=" + nats_cookie +  '&' + query1;
 		return output;
 	}
 
-	if(params.nats !== undefined)
+	if(params.nats != undefined)
 	{
 
-		var encoded_qsv = [];
-		for(k in params){
-			encoded_qsv[encodeURIComponent(k)] = encodeURIComponent(params[k]);
-		}
-
-		var query2 = encoded_qsv.join("&");
+		var query2 = toQueryString(params);
 
 		output = "//" + options.linkdomain + "/signup/signup.php?" + query2;
 		return output;
@@ -50,6 +40,15 @@ function natscode(options){
 
 	output = "//" + options.linkdomain + "/signup/signup.php";
 	return output;
+}
+
+
+function toQueryString(obj) {
+    var parts = [];
+    for (var i in obj) {
+            parts.push(encodeURIComponent(i) + "=" + encodeURIComponent(obj[i]));
+    }
+    return parts.join("&");
 }
 
 function getCookie(name) {
