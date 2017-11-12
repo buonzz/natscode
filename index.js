@@ -38,10 +38,24 @@ function natscode(options){
 		return output;
 	}
 
+
+	if(!isEmpty(params))
+	{
+
+		var query3 = toQueryString(params);
+
+		output = "//" + options.linkdomain + "/signup/signup.php?" + query3;
+		return output;		
+	}
+
 	output = "//" + options.linkdomain + "/signup/signup.php";
 	return output;
 }
 
+
+function isEmpty(obj){
+    return (Object.getOwnPropertyNames(obj).length === 0);
+}
 
 function toQueryString(obj) {
     var parts = [];
