@@ -6,11 +6,11 @@ function natscode(options){
 	var output = {};
 	var params = {};
 
-	if(qsv == undefined)
+	if(raw_params == undefined)
 		params = { "nats" :  options.default_natscode};
 
 	else
-		params = qsv;
+		params = raw_params;
 
 
 	var nats_cookie = getCookie('nats');
