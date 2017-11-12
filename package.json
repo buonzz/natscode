@@ -1,6 +1,6 @@
 {
   "name": "natscode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Retrieve the natscode passed via QueryString or Cookie",
   "main": "index.js",
   "scripts": {
