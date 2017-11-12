@@ -3,7 +3,7 @@ var qsf = require('query-string');
 function natscode(options){
 
 	var raw_params = qsf.parse(window.location.search);
-	var output = {};
+	var output = "";
 	var params = {};
 
 	if(raw_params == undefined)
@@ -45,12 +45,11 @@ function natscode(options){
 		var query2 = encoded_qsv.join("&");
 
 		output = "//" + options.linkdomain + "/signup/signup.php?" + query2;
-		return;
+		return output;
 	}
 
 	output = "//" + options.linkdomain + "/signup/signup.php";
-	return;
-
+	return output;
 }
 
 function getCookie(name) {
