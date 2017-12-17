@@ -9,6 +9,7 @@
   "author": "Darwin Biler",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.1.2",
     "query-string": "^5.0.1"
   }
 }
