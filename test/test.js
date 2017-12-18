@@ -1,9 +1,17 @@
 var assert = require('assert');
+var natscode = require('../index.js');
+var jsdom = require('jsdom');
 
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1,2,3].indexOf(4), -1);
+const {JSDOM} = jsdom;
+const {document} = (new JSDOM('<!doctype html><html><body></body></html>')).window;
+global.document = document;
+global.window = document.defaultView;
+
+describe('natscode', function() {
+  describe('no_querystring_no_cookie', function() {
+    it('should return the default natscode', function() {
+     var output = natscode({"default_natscode" : "testtest", "linkdomain" : "join.example.com"});
+      assert.equal(output, "//join.example.com/signup/signup.php?nats=testtest");
     });
   });
 });
