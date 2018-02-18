@@ -8,6 +8,11 @@
   },
   "author": "Darwin Biler",
   "license": "ISC",
+  "homepage": "https://openadult.org/libraries/natscode",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:openadult/natscode.git"
+  },
   "dependencies": {
     "query-string": "^5.0.1"
   },
