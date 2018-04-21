@@ -10,38 +10,26 @@ function natslink(options){
 	var params = {};
 	var natscode_value = getnatscode({'default_natscode': options.default_natscode});
 
-	if(raw_params == undefined)
+	if(utils.isEmpty(raw_params))
 		params = { "nats" :  natscode_value};
 
 	else
 		params = raw_params;
 
 
-	if(natscode_value != null)
+	var querystring_params = utils.toQueryString(params);
+
+	if(querystring_params.length > 0)
 	{
-
-		var query1 = utils.toQueryString(params);
-
-		output = "//" + options.linkdomain + "/signup/signup.php?nats=" + nats_cookie +  '&' + query1;
-		return output;
-	}
-
-	if(natscode_value == null)
-	{
-
-		var query2 = utils.toQueryString(params);
-
-		output = "//" + options.linkdomain + "/signup/signup.php?" + query2;
+		output = "//" + options.linkdomain + "/signup/signup.php?" + querystring_params;
 		return output;
 	}
 
 
-	if(!isEmpty(params))
+	if(!utils.isEmpty(params))
 	{
 
-		var query3 = utils.toQueryString(params);
-
-		output = "//" + options.linkdomain + "/signup/signup.php?" + query3;
+		output = "//" + options.linkdomain + "/signup/signup.php?" + querystring_params;
 		return output;		
 	}
 
