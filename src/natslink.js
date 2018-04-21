@@ -17,13 +17,8 @@ function natslink(options){
 		params = raw_params;
 
 
-	if(natscode_value != undefined)
+	if(natscode_value != null)
 	{
-		var params_copy = params;
-		if(params_copy.nats !== undefined)
-		{
-			delete params_copy.nats;
-		}
 
 		var query1 = utils.toQueryString(params);
 
@@ -31,7 +26,7 @@ function natslink(options){
 		return output;
 	}
 
-	if(params.nats != undefined)
+	if(natscode_value == null)
 	{
 
 		var query2 = utils.toQueryString(params);
