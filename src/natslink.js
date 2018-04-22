@@ -21,7 +21,7 @@ function natslink(options){
 
 	if(querystring_params.length > 0)
 	{
-		output = "//" + options.linkdomain + "/signup/signup.php?" + querystring_params;
+		output =  window.location.protocol + "//" + options.linkdomain + "/signup/signup.php?" + querystring_params;
 		return output;
 	}
 
@@ -29,11 +29,11 @@ function natslink(options){
 	if(!utils.isEmpty(params))
 	{
 
-		output = "//" + options.linkdomain + "/signup/signup.php?" + querystring_params;
+		output = window.location.protocol +"//" + options.linkdomain + "/signup/signup.php?" + querystring_params;
 		return output;		
 	}
 
-	output = "//" + options.linkdomain + "/signup/signup.php";
+	output = window.location.protocol + "//" + options.linkdomain + "/signup/signup.php";
 	return output;
 }
 
