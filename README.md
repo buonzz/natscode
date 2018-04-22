@@ -22,16 +22,38 @@ npm install natscode
 ## Usage
 
 
+in order to use it, require it in your application
+
+```
+var natscode = require("natscode");
 ```
 
-var natscode = require("natscode");
+generate a nats linkcode
 
+```
 var linkcode = natscode.link({
 	"default_natscode": "hello",
 	"linkdomain": "join.example.com"
-})
+});
 
+console.log(linkcode);
 
 ```
+
+the above will generate a link like this: http://join.example.com/signup/signup.php?nats=hello
+
+get only the natscode value
+```
+var nats = natscode.value({
+	"default_natscode": "hello",
+	"linkdomain": "join.example.com"
+});
+
+console.log(nats);
+```
+
+will output "hello" if either there is no nats present in cookie or querystring.
+
+## Demo
 
 For purely static html app, please check the [demo app](https://github.com/openadult/natscode-demo) to see how to set this up using Browserify. 
