@@ -10,7 +10,7 @@ global.window = document.defaultView;
 describe('natscode', function() {
   describe('no_querystring_no_cookie', function() {
     it('should return the default natscode', function() {
-     var output = natscode.get_natslink({"default_natscode" : "testtest", "linkdomain" : "join.example.com"});
+     var output = natscode.link({"default_natscode" : "testtest", "linkdomain" : "join.example.com"});
       assert.equal(output, "//join.example.com/signup/signup.php?nats=testtest");
     });
   });
