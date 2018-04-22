@@ -4,7 +4,7 @@ var jsdom = require('jsdom');
 
 const {JSDOM} = jsdom;
 const {document} = (new JSDOM('<!doctype html><html><body></body></html>', {
-	url: 'http://www.example.com/'
+	url: 'http://www.example.com/?nats=123'
 })).window;
 
 global.document = document;
