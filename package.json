@@ -4,7 +4,7 @@
   "description": "Retrieve the natscode passed via QueryString or Cookie",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --recursive"
   },
   "author": "Darwin Biler",
   "license": "ISC",

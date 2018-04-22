@@ -5,7 +5,6 @@ var getnatscode = require('./getnatscode');
 function getparams(options){
 
 	var raw_params = qsf.parse(window.location.search);
-	var params = {};
 	var natscode_value = getnatscode(options);
 
 	if(natscode_value != null){
@@ -20,7 +19,7 @@ function getparams(options){
 	// if there is no querystring, but there is either cookie or defaults natscode set
 	// return the querystring but with natscode on it
 	if(!utils.isEmpty(raw_params) || natscode_value != null)	
-		return "?" + utils.toQueryString(params);
+		return "?" + utils.toQueryString(raw_params);
 
 	return '';
 
