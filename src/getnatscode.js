@@ -1,4 +1,5 @@
 var utils = require('./utils');
+var qsf = require('query-string');
 
 /**
 *  get the natscode value
@@ -14,12 +15,18 @@ var utils = require('./utils');
 function getnatscode(options){
 
 	var nats_cookie = utils.getCookie('nats');
+	var raw_params = qsf.parse(window.location.search);
 
 	if(nats_cookie != undefined)
 		return nats_cookie;
 
+	if(raw_params.nats != undefined){
+		return raw_params.nats;
+	}
+
 	if(options.default_natscode != undefined)
 		return options.default_natscode;
+
 	return null;
 }
 
