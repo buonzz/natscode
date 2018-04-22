@@ -20,7 +20,7 @@ function getnatscode(options){
 	if(nats_cookie != undefined)
 		return nats_cookie;
 
-	if(raw_params.nats == undefined){
+	if(raw_params.nats != undefined){
 		return raw_params.nats;
 	}
 

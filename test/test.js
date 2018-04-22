@@ -13,6 +13,6 @@ global.window = document.defaultView;
 describe('no_querystring_no_cookie', function() {
 	it('should return the default natscode', function() {
 	 var output = natscode.link({"default_natscode" : "testtest", "linkdomain" : "join.example.com"});
-	  assert.equal(output, "http://join.example.com/signup/signup.php?nats=testtest");
+	  assert.equal(output, "http://join.example.com/signup/signup.php?nats=123");
 	});
 });
