@@ -5,6 +5,7 @@ var getnatscode = require('./getnatscode');
 function getparams(options){
 
 	var raw_params = qsf.parse(window.location.search);
+	
 	var natscode_value = getnatscode(options);
 
 	if(natscode_value != null){

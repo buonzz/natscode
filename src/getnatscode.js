@@ -21,7 +21,6 @@ function getnatscode(options){
 		return nats_cookie;
 
 	if(raw_params.nats == undefined){
-		console.log("ENTERED HERE", raw_params);
 		return raw_params.nats;
 	}
 
