@@ -26,7 +26,7 @@ npm install natscode
 
 var natscode = require("natscode");
 
-var linkcode = natscode({
+var linkcode = natscode.link({
 	"default_natscode": "hello",
 	"linkdomain": "join.example.com"
 })
