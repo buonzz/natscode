@@ -2,6 +2,16 @@
   "name": "natscode",
   "version": "1.0.8",
   "description": "Retrieve the natscode passed via QueryString or Cookie",
+  "keywords": [
+    "nats",
+    "tgp",
+    "fhg",
+    "gallery",
+    "tmm",
+    "adult",
+    "tour",
+    "paysite"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "mocha"
