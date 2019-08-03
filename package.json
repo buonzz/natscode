@@ -1,6 +1,6 @@
 {
   "name": "natscode",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Retrieve the natscode passed via QueryString or Cookie",
   "keywords": [
     "nats",
