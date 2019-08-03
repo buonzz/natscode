@@ -53,7 +53,3 @@ console.log(nats);
 ```
 
 will output "hello" if either there is no nats present in cookie or querystring.
-
-## Demo
-
-For purely static html app, please check the [demo app](https://github.com/openadult/natscode-demo) to see how to set this up using Browserify. 
